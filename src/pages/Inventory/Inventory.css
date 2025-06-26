@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  color: #000;
+}
+
+.inventory-page {
+  padding: 40px 20px;
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.inventory-page h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Styles */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.form-container input {
+  padding: 12px 14px;
+  background-color: #eef2f3;
+  color: #000;
+  border: 1px solid #666;
+  border-radius: 8px;
+  width: 200px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #8e9eab;
+  box-shadow: 0 0 6px #8e9eab;
+}
+
+.form-container button {
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  color: #000;
+  border: 2px solid #8e9eab;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.form-container button:hover {
+  background: linear-gradient(90deg, #eef2f3, #8e9eab);
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #8e9eab;
+}
+
+/* Search Bar */
+.search-bar {
+  padding: 12px 14px;
+  background-color: #eef2f3;
+  color: #000;
+  border: 1px solid #999;
+  border-radius: 8px;
+  width: 420px;
+  font-size: 14px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #8e9eab;
+  box-shadow: 0 0 6px #8e9eab;
+}
+
+/* Table Section */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  color: #000;
+  font-size: 15px;
+  border: 2px solid #666;
+  min-width: 700px;
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 12px 14px;
+  border: 1px solid #666;
+  text-align: center;
+}
+
+.inventory-table th {
+  background: #8e9eab;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.inventory-table td {
+  background-color: #f5f7fa;
+}
+
+.inventory-table tr:hover {
+  background-color: #e0e7ee;
+}
+
+/* Stock Labels */
+.in-stock {
+  color: green;
+  font-weight: bold;
+}
+
+.out-of-stock {
+  color: red;
+  font-weight: bold;
+}
+
+/* Action Buttons */
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  background: #8e9eab;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background: #eef2f3;
+  color: #000;
+  border: 1px solid #8e9eab;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  background: #8e9eab;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.pagination button:hover,
+.pagination .active {
+  background: #eef2f3;
+  color: #000;
+  border: 1px solid #8e9eab;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container input,
+  .form-container button,
+  .search-bar {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .inventory-table {
+    font-size: 13px;
+  }
+
+  .inventory-table th,
+  .inventory-table td {
+    padding: 10px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}

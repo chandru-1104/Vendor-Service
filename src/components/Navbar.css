@@ -1,0 +1,158 @@
+.navbar {
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  padding: 14px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid black;
+}
+
+/* Layout container */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+/* Center links */
+.nav-center {
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Icons always visible */
+.nav-links li a .icon {
+  font-size: 20px;
+  z-index: 1;
+}
+
+/* Text label hidden by default */
+.nav-links li a .label {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.9s ease;
+  white-space: nowrap;
+}
+
+/* On hover: show label */
+.nav-links li a:hover {
+  background-color: #135058;
+  color: #eef2f3;
+}
+
+.nav-links li a:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Right icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.login-icon {
+  color: black;
+  font-size: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.login-icon:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.2);
+  color: #135058;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-center {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    display: none;
+    background: linear-gradient(180deg, #8e9eab, #eef2f3);
+    border-top: 1px solid black;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .nav-links li a .label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

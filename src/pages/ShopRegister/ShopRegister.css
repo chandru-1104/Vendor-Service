@@ -1,0 +1,149 @@
+/* Clean Background & Container */
+.shop-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  padding: 40px 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+
+/* Card Styling */
+.form-card {
+  background: #eef2f3;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 850px;
+  width: 100%;
+  border: 1px solid #8e9eab;
+  box-shadow: 0 0 10px rgba(142, 158, 171, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Form Title */
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: none;
+}
+
+/* Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Inputs & Textarea */
+.form-grid input,
+.form-grid textarea {
+  padding: 12px 14px;
+  border: 1px solid #8e9eab;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f7f9fa;
+  color: #000;
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus {
+  outline: none;
+  border-color: #8e9eab;
+  box-shadow: 0 0 6px rgba(142, 158, 171, 0.4);
+  background-color: #ffffff;
+}
+
+::placeholder {
+  color: #555;
+}
+
+/* Password Field */
+.password-group {
+  position: relative;
+}
+
+.password-group input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.toggle-eye:hover {
+  color: #8e9eab;
+}
+
+/* Button */
+.submit-btn {
+  grid-column: span 2;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  color: #000;
+  border: 2px solid #8e9eab;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #eef2f3, #8e9eab);
+  color: #000;
+  box-shadow: 0 0 6px #8e9eab;
+  transform: translateY(-2px);
+}
+
+/* Login Link */
+.login-link {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #000;
+}
+
+.login-link a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #8e9eab;
+}
+
+/* Full-width for larger inputs */
+.full-width {
+  grid-column: span 2;
+}
+
+/* Optional Login Icon Style */
+.login-icon {
+  color: #000;
+  font-size: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.login-icon:hover {
+  transform: scale(1.1);
+  color: #8e9eab;
+}

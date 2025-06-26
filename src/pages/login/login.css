@@ -1,0 +1,94 @@
+.login-container {
+  height: 100vh;
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-card {
+  background: #eef2f3;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(142, 158, 171, 0.3);
+  border: 1px solid #8e9eab;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-title {
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: none;
+}
+
+.login-card input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #8e9eab;
+  background: #f9fbfc;
+  color: #000;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #8e9eab;
+  box-shadow: 0 0 6px rgba(142, 158, 171, 0.4);
+  outline: none;
+}
+
+.login-btn {
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  color: #000;
+  border: 2px solid #8e9eab;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #eef2f3, #8e9eab);
+  color: #000;
+  box-shadow: 0 0 10px #8e9eab;
+}
+
+.login-register-text {
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+}
+
+.register-link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  color: #8e9eab;
+}
+
+/* Optional login icon styling */
+.login-icon {
+  color: #000;
+  font-size: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.login-icon:hover {
+  transform: scale(1.1);
+  color: #8e9eab;
+}

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.dashboard-page {
+  min-height: 68vh;
+  background: linear-gradient(90deg, #8e9eab, #eef2f3);
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px 20px;
+  animation: fadeIn 1s ease;
+}
+
+.dashboard-page h2 {
+  font-size: 34px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: none;
+}
+
+.dashboard-page .subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 10px;
+}
+
+/* Metric Cards */
+.metric-card {
+  background: linear-gradient(135deg, #eef2f3, #8e9eab);
+  border: 1px solid #8e9eab;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(142, 158, 171, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  display: none;
+}
+
+.metric-card h3 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.metric-card p {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  text-shadow: none;
+}
+
+.metric-icon {
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 15px;
+  text-shadow: none;
+}
+
+/* Hover effect */
+.metric-card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #8e9eab, #eef2f3);
+  color: #000;
+  box-shadow: 0 0 12px #8e9eab;
+}
+
+.metric-card:hover h3,
+.metric-card:hover p,
+.metric-card:hover .metric-icon {
+  color: #000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-page h2 {
+    font-size: 26px;
+  }
+
+  .metric-card {
+    padding: 20px;
+  }
+
+  .metric-card p {
+    font-size: 24px;
+  }
+}
+
+/* Optional Login Icon Styling */
+.login-icon {
+  color: #000;
+  font-size: 28px;
+  transition: transform 0.3s ease;
+}
+
+.login-icon:hover {
+  color: #8e9eab;
+  transform: scale(1.1);
+}
