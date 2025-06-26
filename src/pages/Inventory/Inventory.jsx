@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify'; // NEW
+import 'react-toastify/dist/ReactToastify.css'; // NEW
 import './Inventory.css';
 
 const Inventory = () => {
@@ -15,6 +17,23 @@ const Inventory = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+
+  // 🚨 Track products for toast alert
+  useEffect(() => {
+    products.forEach((product) => {
+      if (parseInt(product.stock) === 10) {
+        toast.info(`⚠️ Stock Alert: "${product.name}" has reached 10 units`, {
+          position: 'top-right',
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: 'colored',
+        });
+      }
+    });
+  }, [products]);
 
   const handleAddOrUpdate = () => {
     if (!newProduct.name || !newProduct.category) return;
@@ -54,7 +73,7 @@ const Inventory = () => {
   };
 
   useEffect(() => {
-    setCurrentPage(1); // Reset to first page when search changes
+    setCurrentPage(1);
   }, [searchTerm]);
 
   const filteredProducts = products.filter(product =>
@@ -155,6 +174,9 @@ const Inventory = () => {
           ))}
         </div>
       </div>
+
+      {/* ✅ Toast Container */}
+      <ToastContainer />
     </div>
   );
 };
